@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.7" name="stm32f0_ws2812b_dmx512">
+  <Target name="stm32f0_ws2812b_dmx512" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="441" chipName="STM32F030F4P6" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Option name="SupportCPlusplus" value="0"/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="STM32F030F4P6"/>
+          <Define name="STM32F030X6"/>
+          <Define name="USE_STDPERIPH_DRIVER"/>
+          <Define name="__ASSEMBLY__"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="nostartfiles" value="1"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00004000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00001000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="c:/coocox/coide/configuration/programdata/stm32f0_ws2812b_dmx512/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="stm32f0_ws2812b_dmx512"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="STM32F05xx_16.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="46" name="M0 Cmsis Core" path="" type="2"/>
+    <Component id="418" name="CMSIS BOOT" path="" type="2"/>
+    <Component id="419" name="RCC" path="" type="2"/>
+    <Component id="421" name="MISC" path="" type="2"/>
+    <Component id="422" name="GPIO" path="" type="2"/>
+    <Component id="428" name="DMA" path="" type="2"/>
+    <Component id="436" name="TIM" path="" type="2"/>
+    <Component id="437" name="USART" path="" type="2"/>
+  </Components>
+  <Files>
+    <File name="ws2812b.h" path="ws2812b.h" type="1"/>
+    <File name="stm32_lib/src/stm32f0xx_usart.c" path="stm32_lib/src/stm32f0xx_usart.c" type="1"/>
+    <File name="cmsis_boot/stm32f0xx_conf.h" path="cmsis_boot/stm32f0xx_conf.h" type="1"/>
+    <File name="cmsis_boot/startup/startup_stm32f0xx.s" path="cmsis_boot/startup/startup_stm32f0xx.s" type="1"/>
+    <File name="cmsis_core/core_cmInstr.h" path="cmsis_core/core_cmInstr.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f0xx_temp.c" path="cmsis_boot/system_stm32f0xx_temp.c" type="1"/>
+    <File name="cmsis_boot" path="" type="2"/>
+    <File name="cmsis_core/core_cmFunc.h" path="cmsis_core/core_cmFunc.h" type="1"/>
+    <File name="stm32_lib" path="" type="2"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="stm32_lib/inc/stm32f0xx_tim.h" path="stm32_lib/inc/stm32f0xx_tim.h" type="1"/>
+    <File name="cmsis_core" path="" type="2"/>
+    <File name="stm32_lib/inc/stm32f0xx_gpio.h" path="stm32_lib/inc/stm32f0xx_gpio.h" type="1"/>
+    <File name="stm32_lib/inc" path="" type="2"/>
+    <File name="cmsis_boot/stm32f0xx.h" path="cmsis_boot/stm32f0xx.h" type="1"/>
+    <File name="stm32_lib/inc/stm32f0xx_usart.h" path="stm32_lib/inc/stm32f0xx_usart.h" type="1"/>
+    <File name="cmsis_core/core_cm0.h" path="cmsis_core/core_cm0.h" type="1"/>
+    <File name="stm32_lib/src/stm32f0xx_dma.c" path="stm32_lib/src/stm32f0xx_dma.c" type="1"/>
+    <File name="stm32_lib/inc/stm32f0xx_rcc.h" path="stm32_lib/inc/stm32f0xx_rcc.h" type="1"/>
+    <File name="stm32_lib/inc/stm32f0xx_dma.h" path="stm32_lib/inc/stm32f0xx_dma.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f0xx.h" path="cmsis_boot/system_stm32f0xx.h" type="1"/>
+    <File name="stm32_lib/src/stm32f0xx_gpio.c" path="stm32_lib/src/stm32f0xx_gpio.c" type="1"/>
+    <File name="stm32_lib/inc/stm32f0xx_misc.h" path="stm32_lib/inc/stm32f0xx_misc.h" type="1"/>
+    <File name="stm32_lib/src/stm32f0xx_misc.c" path="stm32_lib/src/stm32f0xx_misc.c" type="1"/>
+    <File name="ws2812b.c" path="ws2812b.c" type="1"/>
+    <File name="stm32_lib/src/stm32f0xx_tim.c" path="stm32_lib/src/stm32f0xx_tim.c" type="1"/>
+    <File name="stm32_lib/src/stm32f0xx_rcc.c" path="stm32_lib/src/stm32f0xx_rcc.c" type="1"/>
+    <File name="stm32_lib/src" path="" type="2"/>
+    <File name="main.c" path="main.c" type="1"/>
+  </Files>
+</Project>
