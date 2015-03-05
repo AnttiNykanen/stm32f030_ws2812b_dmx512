@@ -8,13 +8,13 @@
 
 #include "ws2812b.h"
 
-static const uint8_t WS2812B_BUFFER_SIZE = 48;
+static const uint8_t WS2812B_BUFFER_SIZE = 240;
 static const uint8_t WS2812B_DEAD_PERIOD = 1;
 
 __O uint8_t WS2812B_IO_High = 0xFF;
 __O uint8_t WS2812B_IO_Low  = 0x00;
 
-__IO uint8_t WS2812B_IO_FrameData[48];
+__IO uint8_t WS2812B_IO_FrameData[240];
 
 __IO uint8_t WS2812B_TC = 1;
 __IO uint8_t WS2812B_TIM_Overflows = 0;
